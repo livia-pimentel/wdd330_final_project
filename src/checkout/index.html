@@ -13,80 +13,76 @@
         <link rel="stylesheet" href="../fontawesome/css/all.min.css"/>
         <link rel="stylesheet" href="../css/normalize.css"/>
         <link rel="stylesheet" href="../css/style.css"/>
-
         <script src="../js/checkout.js" type="module"></script>
         <script src="../js/cartCounter.js" type="module"></script>
     </head>
-
     <body>
         <header class="divider" id="main-header"></header>
-
         <main class="checkout-page">
-          <h1>Finalize your Order</h1>
-          <section class="divider-checkout">
-            <form name="checkout">
-                <fieldset>
-                  <legend>Shipping</legend>
-                  <div class="checkout__name">
-                    <label for="fname">First Name</label>
-                    <input name="fname" required pattern="[a-zA-Z\s]+$"/>
-                    <label for="lname">Last Name</label>
-                    <input name="lname" required pattern="[a-zA-Z\s]+$"/>
-                  </div>
-                  <div class="contact">
-                    <label class="contact_us">Email</label>
-                    <input type="email" placeholder="your_email@domain.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                    <label class="contact_us">Phone</label>
-                    <input type="tel" required pattern="[0-9\s\-]{5,}$">
-                  </div>
-                  <div class="checkout__address">
-                    <label for="street">Street</label>
-                    <input name="street" required />
-                    <label for="city">City</label>
-                    <input name="city" required />
-                    <label for="state">State</label>
-                    <input name="state" required />
-                    <label for="zip">Zip</label>
-                    <input name="zip" id="zip" required/>
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <legend>Payment</legend>
-                  <div class="checkout__payment">
-                  <label for="cardNumber">Card number</label>
-                  <input name="cardNumber" placeholder="1234123412341234" required pattern="[0-9\s\-]{16}$" />
-                  <label for="expiration">Expiration</label>
-                  <input name="expiration" required />
-                  <label for="code">Security Code</label>
-                  <input name="code" placeholder="123" required pattern="[0-9\s\-]{3}$"/>
-                </div>
-                </fieldset>
-                <fieldset class="checkout-summary">
-                  <legend>Order Summary</legend>
-                  <ul>
-                    <li>
-                      <label for="cartTotal"
-                        >Item Subtotal(<span id="num-items"></span>)</label
-                      >
-                      <p name="cartTotal" id="cartTotal"></p>
-                    </li>
-                    <li>
-                      <label for="delivery">Delivery Fee</label>
-                      <p id="delivery"></p>
-                    </li>
-                    <li>
-                      <label for="tax">Tax</label>
-                      <p id="tax"></p>
-                    </li>
-                    <li>
-                      <label for="orderTotal"><b>Order Total</b></label>
-                      <p id="orderTotal"></p>
-                    </li>
-                  </ul>
-                </fieldset>
-      
-                <button id="checkoutSubmit" type="submit">Checkout</button>
-              </form>
+            <h1>Finalize your Order</h1>
+            <section class="divider-checkout">
+                <form name="checkout">
+                    <fieldset>
+                        <legend>Shipping</legend>
+                        <div class="checkout__name">
+                            <label for="fname">First Name</label>
+                            <input name="fname" required pattern="[a-zA-Z\s]+$"/>
+                            <label for="lname">Last Name</label>
+                            <input name="lname" required pattern="[a-zA-Z\s]+$"/>
+                        </div>
+                        <div class="contact">
+                            <label class="contact_us">Email</label>
+                            <input type="email" placeholder="your_email@domain.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            <label class="contact_us">Phone</label>
+                            <input type="tel" required pattern="[0-9\s\-]{5,}$">
+                        </div>
+                        <div class="checkout__address">
+                            <label for="street">Street</label>
+                            <input name="street" required/>
+                            <label for="city">City</label>
+                            <input name="city" required/>
+                            <label for="state">State</label>
+                            <input name="state" required/>
+                            <label for="zip">Zip</label>
+                            <input name="zip" id="zip" required/>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Payment</legend>
+                        <div class="checkout__payment">
+                            <label for="cardNumber">Card number</label>
+                            <input name="cardNumber" placeholder="1234123412341234" required pattern="[0-9\s\-]{16}$"/>
+                            <label for="expiration">Expiration</label>
+                            <input name="expiration" required/>
+                            <label for="code">Security Code</label>
+                            <input name="code" placeholder="123" required pattern="[0-9\s\-]{3}$"/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="checkout-summary">
+                        <legend>Order Summary</legend>
+                        <ul>
+                            <li>
+                                <label for="cartTotal">Item Subtotal(<span id="num-items"></span>)</label>
+                                <p name="cartTotal" id="cartTotal"></p>
+                            </li>
+                            <li>
+                                <label for="delivery">Delivery Fee</label>
+                                <p id="delivery"></p>
+                            </li>
+                            <li>
+                                <label for="tax">Tax</label>
+                                <p id="tax"></p>
+                            </li>
+                            <li>
+                                <label for="orderTotal">
+                                    <b>Order Total</b>
+                                </label>
+                                <p id="orderTotal"></p>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button id="checkoutSubmit" type="submit">Checkout</button>
+                </form>
             </section>
         </main>
         <footer id="main-footer"></footer>
