@@ -56,7 +56,7 @@ function loginFormTemplate() {
   <legend>Login</legend>
   <p>
     <label for="email">Email</label>
-    <input type="text" placeholder="email" id="email" value="user1@email.com"/>
+    <input type="text" placeholder="email" id="email" value="your_user@email.com"/>
   </p>
   <p>
     <label for="password">Password</label>
