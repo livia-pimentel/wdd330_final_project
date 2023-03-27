@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon"/>
+        <title>Donna Foods</title>
+        <meta name="description" content="Final Project WDD330 - Donna Foods Website"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="../fontawesome/css/all.min.css"/>
+        <link rel="stylesheet" href="../css/normalize.css"/>
+        <link rel="stylesheet" href="../css/style.css"/>
+        <script src="../js/cartCounter.js" type="module"></script>
+        <script src="../js/validationDate.js" type="module"></script>
+        <script src="../js/feedback.js" type="module"></script>
+        <script type="module">
+            // Normally we have been creating a separate js file to hold this. I put it here to show that you can...the next question is should you?
+            // Advantages to putting it here: one less file to request and download.
+            // Disadvantages: it breaks the pattern we have established with our other pages, and the separation of concerns...
+            import { loadHeaderFooter } from "../js/utils.mjs";
+      
+            loadHeaderFooter();
+        </script>
+    </head>
+
+    <body>
+        <header class="divider" id="main-header"></header>
+        <main>
+            <section class="reservation-page">
+                <h1>Reservation</h1>
+                <form name="reservation">
+                    <fieldset>
+                        <legend>Reservation</legend>
+                        <label class="reservation">Name <input type="text" placeholder="Full Name" name="fname" required pattern="[a-zA-Z\s]+$"></label>
+                        <label class="reservation">Email  <input type="email" placeholder="your_email@domain.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></label>
+                        <label class="reservation">Phone <input type="tel" required pattern="[0-9\s\-]{5,}$"></label>
+                        <label class="reservation">Reservation Date <input id="rdate" type="date"  name="rdate" required></label>
+                        <label class="reservation">Message 
+                        <textarea name="bdescription" cols="40" rows="10" required="required"></textarea>
+                        </label>
+                        <input type="hidden" id="dateValue" name="date" value="">
+                        <input type="submit" value="Send Reservation" class="submitBtn">
+                        <div id="feedback"></div>
+                    </fieldset>
+                </form> 
+                <hr>
+            <section class="whatsapp">
+                <h1>If you have any queries or further information, we are also available via WhatsApp.</h1>
+                <a href="https://wa.me/1760442000" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </section>
+            <hr>
+            <section>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2501895391174!2d-73.98303614919116!3d40.75652167922573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258ffba8568a1%3A0x4ecbd3fc710fab52!2s34%20W%2046th%20St%2C%20New%20York%2C%20NY%2010036%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1679093801641!5m2!1spt-BR!2sbr" 
+               allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p><strong>34 W 46th St, New York, NY 10036, United States</strong></p>
+            <p><strong>Phone: </strong>+1 760-442-000 </p>
+            <p><strong>Email:</strong> contact@donnafoodsny.com</p>
+            <p><strong>Monday – Saturday: 11:30 a.m. to 12:00 p.m.</strong></p>
+            </section>
+        </section>
+        </main>
+        <footer id="main-footer"></footer>
+    </body>
+</html>
