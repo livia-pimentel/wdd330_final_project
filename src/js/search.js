@@ -5,7 +5,7 @@ document.querySelector("#search-menu").addEventListener("keyup", () => {
 
     for (let item of itemElement) {
 
-        if (! item.innerHTML.toLowerCase().includes(inputSearch)) {
+        if (!item.innerHTML.toLowerCase().includes(inputSearch)) {
             item.style.display = "none"
         } else {
             item.style.display = "block"

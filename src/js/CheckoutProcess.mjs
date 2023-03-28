@@ -54,7 +54,7 @@ export default class CheckoutProcess {
     summaryElement.innerText = "$" + this.itemTotal;
   }
   calculateOrdertotal() {
-    this.delivery = 10 + (this.list.length - 1) * 2;
+    this.delivery = (10 + (this.list.length - 1) * 2).toFixed(2);
     this.tax = (this.itemTotal * 0.06).toFixed(2);
     this.orderTotal = (
       parseFloat(this.itemTotal) +
