@@ -40,7 +40,7 @@ export default class ProductDetails {
       cartContents = [];
     }
     // then add the current product to the list
-    
+
     cartContents.push(this.product);
     
     alert("Order added successfully!")

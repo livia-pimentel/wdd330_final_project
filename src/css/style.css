@@ -538,7 +538,7 @@ border-radius: 10px;
   margin: 0;
 }
 
-#feedback{
+#feedback, #newsletter{
   font-size: var(--medium-font);
   font-family: var(--font-headline);
   text-align: center;

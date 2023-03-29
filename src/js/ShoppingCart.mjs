@@ -14,7 +14,7 @@ function cartItemTemplate(item) {
     <div cart-card__quantity_area>
       <button id="${item.id}" class="cart-card__quantity_less">-</button>
       <div id="${item.id}" class="cart-card__quantity">${item.quantity}</div>
-      <button id="${item.id}" class="cart-card__quantity_add">+</button>
+      <button id="${item.id}" class="cart-card__quantity_add" onclick="changeQtd()">+</button>
     </div>
     <p class="cart-card__price">$${(item.price).toFixed(2)}</p>
   </li>`;
@@ -37,7 +37,7 @@ export default class ShoppingCart {
       const decreaseQtd = document.querySelector('.cart-card__quantity_less')
       let infoQtd = document.querySelector('.cart-card__quantity')
       let infoPrice = document.querySelector('.cart-card__price')
-
+    
       let totalValue = 0;
       cartItems.map((item) => totalValue += item.price) ;
       document.querySelector(".product-list").innerHTML = htmlItems.join("");
