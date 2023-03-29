@@ -52,18 +52,23 @@ export default class Admin {
 // why do this as functions returning html instead of a template? Both of these are single use. Templates as we have used them make more sense for re-use.
 // using a template would be another valid solution for this however...
 function loginFormTemplate() {
-  return `<fieldset class="login-form">
-  <legend>Login</legend>
-  <p>
-    <label for="email">Email</label>
-    <input type="text" placeholder="email" id="email" value="your_user@email.com"/>
-  </p>
-  <p>
-    <label for="password">Password</label>
-    <input type="password" placeholder="password" id="password" />
-  </p>
-  <button type="submit" id="loginButton">Login</button>
-</fieldset>`;
+  return `<h1>Login</h1>
+    <div class='label-login'>
+      <label for="email">Email</label>
+      <input type="text" placeholder="email" id="email" required/>
+    </div>
+    <div class='label-login'>
+      <label for="password">Password</label>
+      <input type="password" placeholder="password" id="password" />
+    </div>
+    <div class='btnLogin'>
+      <button type="submit" id="loginButton">Enter</button>
+      <hr class="hr-login">
+    </div>
+    <p class="p-login"> Don't have an account?
+      <a href="#">Register</a>
+    </p>
+`;
 }
 // test
 function orderTemplate() {
