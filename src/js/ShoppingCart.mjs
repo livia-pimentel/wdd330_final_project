@@ -14,13 +14,14 @@ function cartItemTemplate(item) {
     <div cart-card__quantity_area>
       <button id="${item.id}" class="cart-card__quantity_less">-</button>
       <div id="${item.id}" class="cart-card__quantity">${item.quantity}</div>
-      <button id="${item.id}" class="cart-card__quantity_add" onclick="changeQtd()">+</button>
+      <button id="${item.id}" class="cart-card__quantity_add">+</button>
     </div>
     <p class="cart-card__price">$${(item.price).toFixed(2)}</p>
   </li>`;
   
     return newItem;
 }
+
 
 export default class ShoppingCart {
     constructor(key, parentSelector) {
@@ -31,15 +32,8 @@ export default class ShoppingCart {
       const cartItems = getLocalStorage(this.key);
       const htmlItems = cartItems.map((item) => cartItemTemplate(item));
       document.querySelector(this.parentSelector).innerHTML = htmlItems.join("");
-      
-      let quantity = 1
-      const addQtd = document.querySelector('.cart-card__quantity_add');
-      const decreaseQtd = document.querySelector('.cart-card__quantity_less')
-      let infoQtd = document.querySelector('.cart-card__quantity')
-      let infoPrice = document.querySelector('.cart-card__price')
-    
       let totalValue = 0;
-      cartItems.map((item) => totalValue += item.price) ;
+      cartItems.map((item) => totalValue += item.price);
       document.querySelector(".product-list").innerHTML = htmlItems.join("");
       document.querySelector(".cart-total-hide").style.display = "block";
       document.querySelector(".cart-total").innerHTML = `Total: $${(totalValue).toFixed(2)}`
