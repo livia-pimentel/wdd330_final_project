@@ -174,6 +174,18 @@ button {
 }
 
 /* End cart icon styles */
+
+.divider-products{
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 80%;
+  background-color: #da8e8e62;
+  padding: 30px;
+  border-radius: 4%;
+  box-shadow: 4px 4px 3px 3px #00000060
+}
+
 .products {
   padding: 0.5em;
 }
@@ -333,12 +345,9 @@ hr {
 }
 
 /* Checkout */
-.checkout-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.divider-checkout{
+  width: auto;
 }
-
 .divider-checkout form fieldset {
   border: 2px solid var(--first-color);
   border-radius: 10px;
@@ -394,35 +403,59 @@ form input:required:valid {
   flex-direction: column;
   align-items: center;
   border: 2px solid var(--first-color);
-  border-radius: 10px;
-  padding: 0.5em;
-  margin: 0.5em;
   background-color: var(--second-color);
   font-size: var(--small-font);
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  max-width: 80%;
+  background-color: #da8e8e62;
+  padding: 30px;
+  border-radius: 4%;
+  box-shadow: 4px 4px 3px 3px #00000060
 }
 
-.checkout-success h1 {
+.checkout-success h1, .divider-checkout h1 {
   text-align: center;
 }
 /* End Checkout */
 
 /* Reservation Page */
-.reservation-page {
-  padding: 0.5rem;
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+.reservation-page, .checkout-page {
   font-size: var(--medium-font);
   margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 80%;
+  background-color: #da8e8e62;
+  padding: 30px;
+  border-radius: 4%;
+  box-shadow: 4px 4px 3px 3px #00000060
+}
+
+#formreserv{
+  width: 100%;
 }
 
 .reservation-page h1 {
   text-align: center;
 }
 
-.reservation-page iframe {
+.contact-reser{
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 2px solid var(--first-color);
+  border-radius: 10px;
   width: 100%;
-  height: 300px;
+}
+
+.contact-reser iframe {
+  width: 100%;
   border: none;
   border-radius: 10px;
 }
@@ -465,6 +498,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
 }
 
 .whatsapp h1 {
@@ -489,10 +523,10 @@ input {
 /* End Reservation Page*/
 
 /* Login */
-.divider-login{
+.divider-login {
   display: flex;
   flex-direction: column;
- align-items: center;
+  align-items: center;
   justify-content: center;
   margin: auto;
   margin-top: 50px;
@@ -504,6 +538,7 @@ input {
   box-shadow: 4px 4px 3px 3px #00000060
 }
 
+
 .divider-login h1{
   text-align: center;
   margin-bottom: 20px;
@@ -511,15 +546,17 @@ input {
 }
 
 .label-login input{
-  padding: 5px 5px;
+  width: 100%;
+  padding: 10px 10px;
   display: inline-block;
-  border: none;
-  border-bottom: 2px solid var(--first-color);
+  border: 0;
+  border-bottom: 2px solid var(--second-color);
   background-color: transparent;
-  min-width: 200px;
+  outline: none;
+  min-width: 180px;
+  font-size: var(--small-font);
+  transition: all .3s ease-out;
   border-radius: 0;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .label-login{
@@ -531,14 +568,24 @@ input {
 
 .label-login input:focus{
   border-bottom: 4px solid  var(--second-color);
+  padding: .5rem;
 }
 
 .label-login label{
   color: var(--first-color);
   pointer-events: none;
   position: absolute;
+  margin-top: 2px;
+  transition: all .3s ease-out;
   top: 0;
   left: 0;
+}
+
+.label-login input:focus + label,
+.label-login input:valid + label{
+  font-size: 13px;
+  margin-top: 0;
+  color: var(--black)
 }
 
 #loginButton{
@@ -546,28 +593,17 @@ background-color: transparent;
 border-color: var(--first-color);
 color: var(--black);
 padding: 1rem;
+font-weight: bold;
+margin-top: 20px;
+border-radius: 4px;
+cursor: pointer;
+outline: none;
+transition: all .4s ease-out;
 }
 
 #loginButton:hover{
   background-color: var(--first-color);
   color: var(--fourth-color);
-}
-
-.hr-login{
-  margin-top: 10%;
-  margin-bottom: 10%;
-  min-width: 180px;
-  color: var(--fourth-color);
-}
-
-.p-login{
-  text-align: center;
-}
-
-.p-login a{
-  color: var(--first-color);
-  font-weight: bold;
-  text-decoration: none;
 }
 /* End Login */
 
@@ -721,12 +757,10 @@ padding: 1rem;
     justify-content: space-around;
   }
 
-  .checkout-page {
-    display: grid;
-    max-width: 80%;
-    margin: auto;
+  .divider-checkout{
+    width: 90%;
   }
-
+  
   .checkout-page h1 {
     margin: auto;
   }

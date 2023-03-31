@@ -54,23 +54,19 @@ export default class Admin {
 function loginFormTemplate() {
   return `<h1>Login</h1>
     <div class='label-login'>
-      <label for="email">Email</label>
-      <input type="text" placeholder="email" id="email" required/>
+        <label for="email">Email</label>
+        <input type="text" id="email" required/>
     </div>
     <div class='label-login'>
       <label for="password">Password</label>
-      <input type="password" placeholder="password" id="password" />
+      <input type="password" id="password" />
     </div>
     <div class='btnLogin'>
       <button type="submit" id="loginButton">Enter</button>
-      <hr class="hr-login">
+      </form>
     </div>
-    <p class="p-login"> Don't have an account?
-      <a href="#">Register</a>
-    </p>
 `;
 }
-// test
 function orderTemplate() {
   return `<h2>Current Orders</h2>
   <table id="orders">
